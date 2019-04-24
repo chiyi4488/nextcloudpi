@@ -12,10 +12,11 @@
 configure()
 {
   [[ $ACTIVE != "yes" ]] && {
-    ncc config:system:set --type=bool --value=true simpleSignUpLink.shown
+    ncc config:system:set --type=bool --value=false simpleSignUpLink.shown
     return 0 
   }
-  ncc config:system:set --type=bool --value=false simpleSignUpLink.shown
+    ncc config:system:set --type=bool --value=false simpleSignUpLink.shown
+
 }
 
 install(){ :; }
